@@ -1,4 +1,4 @@
-Attempts to determine the natural language of a selection of Unicode (utf-8) text. 
+# Attempts to determine the natural language of a selection of Unicode (utf-8) text. 
 
 Based on `guesslanguage.cpp
 <http://websvn.kde.org/branches/work/sonnet-refactoring/common/nlp/guesslanguage.cpp?view=markup>`_
@@ -20,29 +20,38 @@ JavaScript (https://github.com/wooorm/franc)
 R (https://github.com/MangoTheCat/franc)
 
 
-Requirements
-=============
+### Requirements
+-----------------
 numpy
 
-Installation
-==============
+### Installation
+----------------
 Clone the repository
 Run app.py
 
-Usage
-=====
+### Usage
+----------
 
 The main entry points all take a single string as input and return a language identifier. 
 The string must be Unicode or UTF-8 text. The language identifer can be the language name
 in English, the two- or three-letter IANA language code, a language ID or a tuple containing
 all three codes.
 
-The primary entry points, and the return values, are as follows::
-
-  guessLanguage(txt) - IANA language code
-  guessLanguageTag(txt) - IANA language code (same as guessLanguage)
-  guessLanguageName(txt) - Language name in English
-  guessLanguageId(txt) - language ID
-  guessLanguageInfo(txt) - tuple of (IANA code, id, name) 
+```python
+import guess_language
 
 
+chi_text = '這是一個非常美麗的地方' # This is a very beautiful place
+hin_text = "मेरा नाम अनमोल है और मैं स्कूल जाता हूँ" # My name  is Anmol and I go to school
+kan_text = 'ನನ್ನ ಹೆಸರು ಅನ್ಮೋಲ್ ಮತ್ತು ನಾನು ಶಾಲೆಗೆ ಹೋಗುತ್ತೇನೆ' # My name  is Anmol and I go to school
+tel_text = "నా పేరు అన్మోల్ మరియు నేను పాఠశాలకు వెళ్తాను" # My name  is Anmol and I go to school
+
+text = tel_text # Choose your text here
+
+print(guess_language.guessLanguage(text.encode('utf-8')))
+print(guess_language.guessLanguageInfo(text.encode('utf-8')))
+```
+
+#### Issues 
+-----------------
+If there are any issues while using the app let me know 
