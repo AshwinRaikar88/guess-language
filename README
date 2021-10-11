@@ -1,12 +1,12 @@
-# Attempts to determine the natural language of a selection of Unicode (utf-8) text. 
+# Attempts to determine the natural language of a selection of "Unicode (utf-8) text". 
 
-Based on `guesslanguage.cpp
-<http://websvn.kde.org/branches/work/sonnet-refactoring/common/nlp/guesslanguage.cpp?view=markup>`_
+Based on guesslanguage.cpp
+http://websvn.kde.org/branches/work/sonnet-refactoring/common/nlp/guesslanguage.cpp?view=markup
 by Jacob R Rideout for KDE which itself is based on
-`Language::Guess <http://languid.cantbedone.org/>`_ by Maciej Ceglowski.
+Language::Guess http://languid.cantbedone.org/ by Maciej Ceglowski.
 
-Detects over 60 languages - all languages listed in the `trigrams
-<http://code.google.com/p/guess-language/source/browse/trunk/guess_language/trigrams/>`_
+Detects over 60 languages - all languages listed in the trigrams
+http://code.google.com/p/guess-language/source/browse/trunk/guess_language/trigrams/
 directory plus Japanese, Chinese, Korean and Greek.
 
 guess_language uses heuristics based on the character set and trigrams in a sample text 
